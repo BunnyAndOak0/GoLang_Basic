@@ -65,8 +65,8 @@ func main() {
 	fmt.Println("马的名字为 = ", horse_animal.Animal.name)
 	fmt.Println("调用了add的方法后，age = ", horse_animal.add)
 
-	//重载
-
+	//重载  进行了add方法的重载
+	horse_animal.add()
 }
 
 type Animal struct {
@@ -78,6 +78,13 @@ type Animal struct {
 //属于数据结构的函数 可以为数据结构定义的自己的函数
 func (animal *Animal) add() {
 	animal.age += 10
+}
+
+func (horse *horse) add() {
+	fmt.Println(horse.name)
+	fmt.Println(horse.speak)
+	fmt.Println(horse.age)
+	fmt.Println(horse.color)
 }
 
 //传地址的方法
